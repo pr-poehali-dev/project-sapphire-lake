@@ -5,6 +5,12 @@ import { WorkSection } from "@/components/sections/work-section"
 import { ServicesSection } from "@/components/sections/services-section"
 import { AboutSection } from "@/components/sections/about-section"
 import { ContactSection } from "@/components/sections/contact-section"
+import { KnowledgeQualitySection } from "@/components/sections/knowledge-quality-section"
+import { IncomingMonitoringSection } from "@/components/sections/incoming-monitoring-section"
+import { NpkSection } from "@/components/sections/npk-section"
+import { PersonalParticipationSection } from "@/components/sections/personal-participation-section"
+import { CorrespondenceOlympiadsSection } from "@/components/sections/correspondence-olympiads-section"
+import { PresenceOlympiadsSection } from "@/components/sections/presence-olympiads-section"
 import { MagneticButton } from "@/components/magnetic-button"
 import { useRef, useEffect, useState } from "react"
 
@@ -77,7 +83,7 @@ export default function Index() {
       const deltaX = touchStartX.current - touchEndX
 
       if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
-        if (deltaY > 0 && currentSection < 4) {
+        if (deltaY > 0 && currentSection < 10) {
           scrollToSection(currentSection + 1)
         } else if (deltaY < 0 && currentSection > 0) {
           scrollToSection(currentSection - 1)
@@ -147,7 +153,7 @@ export default function Index() {
         const scrollLeft = scrollContainerRef.current.scrollLeft
         const newSection = Math.round(scrollLeft / sectionWidth)
 
-        if (newSection !== currentSection && newSection >= 0 && newSection <= 4) {
+        if (newSection !== currentSection && newSection >= 0 && newSection <= 10) {
           setCurrentSection(newSection)
         }
 
@@ -225,8 +231,8 @@ export default function Index() {
           <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Парохоня Ю.В.</span>
         </button>
 
-        <div className="hidden items-center gap-8 md:flex">
-          {["Главная", "Достижения", "Подход", "О себе", "Контакты"].map((item, index) => (
+        <div className="hidden items-center gap-6 md:flex">
+          {["Главная", "Достижения", "Подход", "О себе", "Контакты", "Качество знаний", "Вх. мониторинг", "НПК", "Личное участие", "Заочные олимп.", "Очные олимп."].map((item, index) => (
             <button
               key={item}
               onClick={() => scrollToSection(index)}
