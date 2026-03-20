@@ -220,13 +220,13 @@ export default function Index() {
           className="flex items-center gap-2 transition-transform hover:scale-105"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">F</span>
+            <span className="font-sans text-xl font-bold text-foreground">П</span>
           </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Flowrise</span>
+          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Парохоня Ю.В.</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
-          {["Главная", "Работы", "Услуги", "О нас", "Контакты"].map((item, index) => (
+          {["Главная", "Достижения", "Подход", "О себе", "Контакты"].map((item, index) => (
             <button
               key={item}
               onClick={() => scrollToSection(index)}
@@ -245,7 +245,7 @@ export default function Index() {
         </div>
 
         <MagneticButton variant="secondary" onClick={() => scrollToSection(4)}>
-          Начать
+          Связаться
         </MagneticButton>
       </nav>
 
@@ -261,16 +261,20 @@ export default function Index() {
         <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
           <div className="max-w-3xl">
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
-              <p className="font-mono text-xs text-foreground/90">Современные технологии</p>
+              <p className="font-mono text-xs text-foreground/90">Учитель истории · Высшая категория</p>
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
               <span className="text-balance">
-                Цифровое будущее
+                Парохоня
+                <br />
+                Юлия
+                <br />
+                Владимировна
               </span>
             </h1>
             <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/90 duration-1000 delay-200 md:text-xl">
               <span className="text-pretty">
-                Создаем современные веб-приложения и цифровые продукты, которые помогают бизнесу расти и развиваться.
+                Преподаю историю с любовью к деталям и глубоким уважением к каждому ученику. История — это не прошлое, это ключ к пониманию настоящего.
               </span>
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
@@ -279,11 +283,22 @@ export default function Index() {
                 variant="primary"
                 onClick={() => scrollToSection(4)}
               >
-                Обсудить проект
+                Написать мне
               </MagneticButton>
               <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(2)}>
-                Наши услуги
+                Мой подход
               </MagneticButton>
+            </div>
+          </div>
+
+          <div className="absolute bottom-16 right-8 hidden animate-in fade-in duration-1000 delay-700 md:right-16 md:block lg:right-24">
+            <div className="relative h-64 w-48 overflow-hidden rounded-2xl border border-foreground/20 shadow-2xl md:h-80 md:w-60">
+              <img
+                src="https://cdn.poehali.dev/projects/ca8c5121-d33b-4733-88b0-d974e8825db8/files/a95e6f5c-16c0-4aa6-9227-24cae5d1dcbb.jpg"
+                alt="Парохоня Юлия Владимировна"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
           </div>
 
